@@ -1,0 +1,502 @@
+/* Mobile-first styles */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #020659;
+}
+
+.page {
+    /* overflow: hidden; */
+    max-width: 834px;
+    background-color: white;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #020873;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+ul {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.item_1 img {
+    width: 40px;
+    height: 40px;
+}
+
+li {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+li .menu {
+    display: block;
+    width: 100px !important;
+}
+
+.hero {
+    color: white;
+    background-color: blue;
+    height: auto;
+    padding: 20px;
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+.hero p {
+    margin-bottom: 0px;
+}
+
+.trending {
+    margin-left: 20px;
+    color: #590242;
+}
+
+.audio_container {
+    max-width: 834px;
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.audio_container div {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .item_content {
+        background-color: white;
+        width: 380px !important;
+        height: 380px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    
+}
+
+audio {
+    width: 100%;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.audio_container .item {
+    position: relative;
+    
+    .audio_controls {
+        position: absolute;
+    }
+
+    .song_info {
+        height: 80px;
+        justify-content: start;
+        position: absolute;
+        display: flex;
+        background-color: rgb(255, 255, 255, 0.8);
+        flex-direction: column;
+        bottom: 0;
+
+
+        h3 {
+            margin: 14px auto 0 20px;
+            color: #590242;
+        }
+
+        p {
+            margin: 0 auto auto 20px;
+            color: #590242;
+        }
+    }
+}
+
+.trending_button {
+
+    button {
+        width: 160px;
+        height: 30px;
+        background-color: #590242;
+        border-radius: 4px;
+        border: none;
+        color: white !important;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin-left: auto !important;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    
+    
+}
+
+.playlist_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h3 {
+        margin: 20px 20px 4px 20px !important;
+        color: #590242;
+    }
+}
+
+.your_playlist_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 400px;
+    overflow-x: scroll;
+    background-color: #0d8dfb;
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        /* padding: 10px; */
+        margin: 10px;
+    }
+
+    .item_content {
+        background-color: #2699fb;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            margin: 10px;
+            height: 120px;
+            width: 180px;
+            display: inline;
+        }
+
+        div {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            text-align:center;
+            padding: 10px;
+            color: white;
+
+            h4 {
+                margin: 0;
+            }
+
+            p {
+                margin: 18px 0 0 0;
+            }
+        }
+    }
+}
+
+.curated_playlist_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 400px;
+    overflow: scroll;
+    background-color: #020873;
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        /* padding: 10px; */
+        margin: 10px;
+    }
+
+    .item_content {
+        background-color: #030a8c;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            margin: 10px;
+            height: 120px;
+            width: 180px;
+            display: inline;
+        }
+
+        div {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            text-align:center;
+            padding: 10px;
+            color: white;
+
+            h4 {
+                margin: 0;
+            }
+
+            p {
+                margin: 18px 0 0 0;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #590242;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width:834px) {
+    ul .item_1{
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    ul .item_2{
+        margin-left: 20px;
+        
+    }
+
+    ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:834px) {
+
+    ul .item_3{
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    ul .item_4{
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    ul .item_5{
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    ul .item_6{
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    ul {
+        grid-template-columns: 100px 1fr 1fr;
+    }
+
+    .playlist_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 834px;
+        width: 100%;
+    
+        h3 {
+            margin: 20px 20px 4px 20px !important;
+            color: #590242;
+        }
+    }
+
+    .trending_button {
+
+       button {
+        width: 160px;
+        height: 30px;
+        background-color: #590242;
+        border-radius: 4px;
+        border: none;
+        color: white !important;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+
+        margin: 10px 100% 10px 0px;
+        margin-left: 20px !important;
+    }
+        
+        
+    }
+
+    
+}
+
+
+
+/* @media screen and (max-width: 834px) {
+    li .menu {
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    .image {
+        display: none;
+        overflow: visible;
+        position: absolute;
+        
+    }
+
+    /* ul {
+        justify-content: center;
+    } */
+    /* label span, input {
+        
+    } }*/
+
+
+/* @media screen and (min-width: 834px) {
+    li .menu_burger {
+        display: none;
+        position: absolute;
+    }
+} */
+
+/* li .menu {
+    font-size: 1.25rem;
+} */
+
+/* label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width: 834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Desktop styles */
+/* @media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+} */
